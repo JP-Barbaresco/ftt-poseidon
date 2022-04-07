@@ -1,5 +1,4 @@
 const Post = require("../models/Post");
-//const Joi = require('@hapi/joi')
 
 exports.list = (_, res) => {
   Post.findAll({
