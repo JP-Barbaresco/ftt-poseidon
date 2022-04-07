@@ -5,7 +5,7 @@ var mysql = require("mysql");
 var con = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "banana123",
+  password: "1234",
 });
 con.connect((err) => {
   if (err) throw err;
@@ -17,7 +17,7 @@ con.connect((err) => {
 });
 
 // Conexão com o banco de dados criado
-const sequelize = new Sequelize("postapp", "root", "banana123", {
+const sequelize = new Sequelize("postapp", "root", "1234", {
   host: "localhost",
   dialect: "mysql",
   query: { raw: true },
