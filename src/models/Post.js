@@ -14,8 +14,8 @@ const Post = db.sequelize.define("vitimas", {
       validate: {isInt: true, len: [1]}
     },
     id_militar: {
-      type: db.Sequelize.BIGINT(11), 
-      validate: {isInt: true}
+      type: db.Sequelize.STRING(),
+      validate: {max: [70]}
     },
     OBM: {
       type: db.Sequelize.STRING(), 
