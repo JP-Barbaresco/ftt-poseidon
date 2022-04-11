@@ -14,13 +14,13 @@ var postagemController = require("../controller/vitimasController");
 router
   .route("/vitimas")
   .get((req, res) => postagemController.list(req, res))
-  .put((req, res) => postagemController.save(req, res));
+  .post((req, res) => postagemController.save(req, res));
 
 var bensController = require("../controller/bensController");
 router
   .route("/bens")
   .get((req, res) => bensController.list(req, res))
-  .put((req, res) => bensController.save(req, res));
+  .post((req, res) => bensController.save(req, res));
   //.put((req, res) => bensController.save(req, res));  
 
 module.exports = router;
