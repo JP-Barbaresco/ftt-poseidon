@@ -3,7 +3,7 @@ const app = express();
 
 // Configuração do serializador/desserializador
 const bodyParser = require("body-parser");
-const router = require("./routes/vitimas");
+const router = require("./routes/formRoutes");
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 

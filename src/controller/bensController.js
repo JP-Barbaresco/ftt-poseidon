@@ -1,4 +1,4 @@
-const Post = require("../models/TabelaVitima");
+const Post = require("../models/TabelaBens");
 
 exports.list = (_, res) => {
   Post.findAll({
@@ -15,9 +15,7 @@ exports.save = (req, res) => {
     OBM: req.body.OBM,
     segunda_resposta: req.body.segunda_resposta,
     data_rendicao: req.body.data_rendicao,
-    nome_vitima: req.body.nome_vitima,
-    idade_vitima: req.body.idade_vitima,
-    sexo_vitima: req.body.sexo_vitima,
+    bem_resgatado: req.body.bem_resgatado,
     condicao_ocorrencia: req.body.condicao_ocorrencia,
     ingestao_alcool: req.body.ingestao_alcool,
     data_submercao: req.body.data_submercao,
@@ -35,8 +33,6 @@ exports.save = (req, res) => {
     data_encontro: req.body.data_encontro,
     hora_encontro: req.body.hora_encontro,
     deslocamento: req.body.deslocamento,
-    tempo_espera: req.body.tempo_espera,
-    condicao_vitima: req.body.condicao_vitima,
     relato: req.body.relato,
   }).then((post) => res.send(post));
 };
