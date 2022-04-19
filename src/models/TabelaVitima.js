@@ -56,15 +56,15 @@ const Post = db.sequelize.define("vitimas", {
   },
   ultimo_avistamento: {
     type: db.Sequelize.STRING(),
-    validate: { max: [255] },
+    validate: { max: [20] },
   },
   descricao_avistamento: {
     type: db.Sequelize.STRING(),
     validate: { max: [400] },
   },
   ponto_encontro: {
-    type: db.Sequelize.STRING(),
-    validate: { max: [255] },
+    type: db.Sequelize.STRING(20),
+    validate: { max: [20] },
   },
   descricao_encontro: {
     type: db.Sequelize.STRING(20),
