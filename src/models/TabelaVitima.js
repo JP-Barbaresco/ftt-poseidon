@@ -67,16 +67,8 @@ const Post = db.sequelize.define("vitimas", {
     validate: { max: [255] },
   },
   descricao_encontro: {
-    type: db.Sequelize.STRING(),
-    validate: { max: [400] },
-  },
-  ponto_evidencia: {
-    type: db.Sequelize.STRING(),
-    validate: { max: [255] },
-  },
-  descricao_evidencia: {
-    type: db.Sequelize.STRING(),
-    validate: { max: [400] },
+    type: db.Sequelize.STRING(20),
+    validate: { max: [20] },
   },
   tipo_local: {
     type: db.Sequelize.TINYINT(),
