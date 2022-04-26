@@ -1,27 +1,17 @@
 const Sequelize = require("sequelize");
 var mysql = require("mysql");
 
-// Cria uma conexão com mysql e cria o banco caso ele não exista
-var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "1234",
-});
-con.connect((err) => {
-  if (err) throw err;
-  console.log("Database connected!");
-  con.query("CREATE DATABASE IF NOT EXISTS `postapp`", (err, _) => {
-    if (err) throw err;
-    console.log("Database ok!");
-  });
-});
-
 // Conexão com o banco de dados criado
-const sequelize = new Sequelize("postapp", "root", "1234", {
-  host: "localhost",
-  dialect: "mysql",
-  query: { raw: true },
-});
+const sequelize = new Sequelize(
+  "heroku_d532412e469ab9c",
+  "b3c99d3068bdb6",
+  "13f1f38d",
+  {
+    host: "us-cdbr-east-05.cleardb.net",
+    dialect: "mysql",
+    query: { raw: true },
+  }
+);
 
 module.exports = {
   Sequelize: Sequelize,

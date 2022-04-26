@@ -1,4 +1,5 @@
 const db = require("../config/db/bd");
+
 const Post = db.sequelize.define("bens", {
   RAI: {
     type: db.Sequelize.INTEGER(),
