@@ -16,5 +16,5 @@ process.on("uncaughtException", (err) => {
 });
 
 // Inicializando servidor
-var port_number = app.listen(process.env.PORT || 3000);
+const port_number = app.listen(process.env.PORT || 3000);
 app.listen(port_number, () => console.log("Server running on port 3000..."));

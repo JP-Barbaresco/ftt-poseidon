@@ -10,25 +10,26 @@ const Post = db.sequelize.define("bens", {
     validate: { isInt: true, len: [1] },
   },
   apoio: {
-    type: db.Sequelize.TINYINT(),
-    validate: { isInt: true, len: [1] },
+    type: db.Sequelize.BOOLEAN
   },
-  id_militar: {
-    type: db.Sequelize.STRING(),
-    validate: { max: [70] },
-  },
-  OBM: {
+  OBM_apoio: {
     type: db.Sequelize.STRING(),
     validate: { max: [255] },
   },
-  segunda_resposta: {
-    type: db.Sequelize.TINYINT(),
-    validate: { isInt: true, len: [1] },
-  },
-  data_rendicao: {
-    type: db.Sequelize.DATEONLY(),
-    validate: { isDate: true },
-  },
+  // id_militar: {
+  //   type: db.Sequelize.STRING(),
+  //   validate: { max: [70] },
+  // },
+  
+  // },
+  // segunda_resposta: {
+  //   type: db.Sequelize.TINYINT(),
+  //   validate: { isInt: true, len: [1] },
+  // },
+  // data_rendicao: {
+  //   type: db.Sequelize.DATEONLY(),
+  //   validate: { isDate: true },
+  // },
   bem_resgatado: {
     type: db.Sequelize.STRING(),
     validate: { max: [200] },

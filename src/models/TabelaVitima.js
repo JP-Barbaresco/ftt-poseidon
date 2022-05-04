@@ -10,25 +10,25 @@ const Post = db.sequelize.define("vitimas", {
     validate: { isInt: true, len: [1] },
   },
   apoio: {
-    type: db.Sequelize.TINYINT(),
-    validate: { isInt: true, len: [1] },
-  },
-  id_militar: {
-    type: db.Sequelize.STRING(),
-    validate: { max: [70] },
-  },
+    type: db.Sequelize.BOOLEAN
+    },
   OBM: {
-    type: db.Sequelize.STRING(),
-    validate: { max: [255] },
+  type: db.Sequelize.STRING(),
+  validate: { max: [255] },
   },
-  segunda_resposta: {
-    type: db.Sequelize.TINYINT(),
-    validate: { isInt: true, len: [1] },
-  },
-  data_rendicao: {
-    type: db.Sequelize.DATEONLY(),
-    validate: { isDate: true },
-  },
+  // segunda_resposta: {
+  //   type: db.Sequelize.TINYINT(),
+  //   validate: { isInt: true, len: [1] },
+  // },
+  // id_militar: {
+  //   type: db.Sequelize.STRING(),
+  //   validate: { max: [70] },
+  // },
+
+  // data_rendicao: {
+  //   type: db.Sequelize.DATEONLY(),
+  //   validate: { isDate: true },
+  // },
   nome_vitima: {
     type: db.Sequelize.STRING(),
     validate: { max: [70] },
@@ -38,17 +38,22 @@ const Post = db.sequelize.define("vitimas", {
     validate: { isInt: true },
   },
   sexo_vitima: {
-    type: db.Sequelize.TINYINT(1),
+    type: db.Sequelize.TINYINT(1)
   },
   condicao_ocorrencia: {
-    type: db.Sequelize.TINYINT(1),
+    type: db.Sequelize.TINYINT(1)
+  },
+  vestimenta: {
+    type: db.Sequelize.BOOLEAN
   },
   ingestao_alcool: {
-    type: db.Sequelize.TINYINT(),
-    validate: { isInt: true, len: [1] },
+    type: db.Sequelize.TINYINT(1)
+  },
+  sabia_nadar: {
+    type: db.Sequelize.BOOLEAN
   },
   data_submercao: {
-    type: db.Sequelize.DATEONLY(),
+    type: db.Sequelize.DATEONLY,
     validate: { isDate: true },
   },
   hora_submercao: {
@@ -84,6 +89,9 @@ const Post = db.sequelize.define("vitimas", {
     type: db.Sequelize.INTEGER(3),
     validate: { isInt: true },
   },
+  profundidade: {
+    type: db.Sequelize.INTEGER
+  },
   data_encontro: {
     type: db.Sequelize.DATEONLY(),
     validate: { isDate: true },
@@ -91,21 +99,21 @@ const Post = db.sequelize.define("vitimas", {
   hora_encontro: {
     type: db.Sequelize.TIME(),
   },
-  deslocamento: {
-    type: db.Sequelize.INTEGER(10),
-    validate: { isInt: true },
-  },
-  tempo_espera: {
-    type: db.Sequelize.TIME(),
-  },
   condicao_vitima: {
     type: db.Sequelize.TINYINT(),
     validate: { isInt: true, len: [1] },
+  },
+  tempo_espera: {
+    type: db.Sequelize.TIME(),
   },
   relato: {
     type: db.Sequelize.TEXT(),
     validate: { max: [500] },
   },
+  // deslocamento: {
+  //   type: db.Sequelize.INTEGER(10),
+  //   validate: { isInt: true },
+  // },
 });
 Post.sync({ force: false });
 
