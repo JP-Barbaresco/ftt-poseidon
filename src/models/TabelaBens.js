@@ -10,7 +10,7 @@ const Post = db.sequelize.define("bens", {
     validate: { isInt: true, len: [1] },
   },
   apoio: {
-    type: db.Sequelize.BOOLEAN
+    type: db.Sequelize.BOOLEAN()
   },
   OBM_apoio: {
     type: db.Sequelize.STRING(),
